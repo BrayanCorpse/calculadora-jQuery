@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<script src="https://kit.fontawesome.com/57bed686a4.js" crossorigin="anonymous"></script>
+
+    <style>
+
+h1
+{
+color:darkturquoise;
+
+}
+
+sub
+{
+color: chocolate;
+
+}
+
+body
+{
+
+    background: #41295a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+p{
+
+  color: azure;
+
+}
+
+.card-text
+{
+  color: black;
+}
+
+.color{
+  background-color:paleturquoise;
+}
+
+@media (max-width: 600px) {
+
+@supports (-ms-ime-align:auto) {
+  div {
+    display: inline-table;
+  }
+}
+}
+
+    </style>
+
+    
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    
+
+function trunc (x, posiciones = 0) {
+var s = x.toString()
+var l = s.length
+var decimalLength = s.indexOf('.') + 1
+var numStr = s.substr(0, decimalLength + posiciones)
+return Number(numStr)
+
+//Declaramos variables
+var operandoa;
+
+var operacion;
+
+var operaciop;
+
+var operandob;
+
+var operandoc;
+
+var res;
+
+var numeros;
+
+var borrar;
+
+var igual;
+
+      }    
+    
+  function limpiar(){
+  $("#cifra").val("");
+  $('#cifra').attr("placeholder", null);
+  
+
+  
+  };
+
+  function reset(){
+  operandoa = 0;
+	operandob = 0;
+	operacion = "";
+  operacionp = "";
+  console.clear();  
+  };
+
+  $("#encender").click(function() {
+  reset();
+  $('#cifra').attr("readonly", true);
+  $('#cifra').attr("placeholder", null);
+  $('#cifra').val("");
+  $("#punto").attr("disabled", false);
+  $(".btn-lg").attr("disabled", true);
+  $(".btn-primary").attr("disabled", false);
+  $("#cifra").removeClass('color');
+  $("#memory").html("");
+
+
+
+
+  });
+
+  $("#encender").dblclick(function() {
+  $('#cifra').attr("readonly", false);
+  $('#cifra').attr("placeholder", "Calculadora...");
+  $(".btn-lg").attr("disabled", false);
+
+
+  
+
+  });
+
+  
+   $("#erase").click(function() {
+   reset();
+   $("#cifra").val("");
+   $("#punto").attr("disabled", false);
+   $("#porcentaje").attr("disabled", false);
+   $("#division").attr("disabled", false);
+   $("#cifra").removeClass('color');
+   $("#memory").html("");
+   $(".btn-outline-dark").attr("disabled", false);
+   
+	
+  });
+
+  $("#clean").click(function() {  
+   borrar = borrar.slice(0,-1);
+   reset(); 
+   console.log(borrar);
+   $("#cifra").val(borrar);
+   $("#cifra").removeClass('color');
+   $("#memory").html("");
+  	
+  });
+
+  $("#siete").click(function(e) {
+  var siete = document.getElementById('siete');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  
+  });
+
+  $("#ocho").click(function(e) {
+  var ocho = document.getElementById('ocho');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#nueve").click(function(e) {
+  var nueve = document.getElementById('nueve');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#seis").click(function(e) {
+  var seis = document.getElementById('seis');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#cinco").click(function(e) {
+  var cinco = document.getElementById('cinco');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#cuatro").click(function(e) {
+  var cuatro = document.getElementById('cuatro');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#tres").click(function(e) {
+  var tres = document.getElementById('tres');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#dos").click(function(e) {
+  var dos = document.getElementById('dos');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#uno").click(function(e) {
+  var uno = document.getElementById('uno');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#cero").click(function(e) {
+  var cero = document.getElementById('cero');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  borrar = $("#cifra").val();
+  console.log(borrar);
+  });
+
+  $("#punto").click(function() {
+  var punto = document.getElementById('punto');
+  var cifra = document.getElementById('cifra');
+  cifra.value +=  this.value;
+  $("#cifra").removeClass('color');
+  });
+
+  $("#porcentaje").click(function() {
+  // operandoa = parseFloat($("#cifra").val());
+   operacionp = "%";
+  // $("#cifra").val(operacion);
+  // limpiar();
+  // console.log(operandoa);
+  // console.log(operacion);
+  operandoc = parseFloat($("#cifra").val());
+    por();
+  $("#porcentaje").attr("disabled", true);
+  $("#division").attr("disabled", false);
+  $("#suma").attr("disabled", false);
+  $("#resta").attr("disabled", false);
+  $("#x").attr("disabled", false);
+  $("#cifra").removeClass('color');
+  });
+
+  $("#division").click(function() {
+  operandoa = parseFloat($("#cifra").val());
+  operacion = "÷";
+  $("#cifra").val(operacion);
+  limpiar();
+  console.log(operandoa);
+  console.log(operacion);
+  
+  $("#division").attr("disabled", true);
+  $("#porcentaje").attr("disabled", false);
+  $("#suma").attr("disabled", false);
+  $("#resta").attr("disabled", false);
+  $("#x").attr("disabled", false);
+  $("#cifra").removeClass('color');
+  });
+
+  $("#suma").click(function() {
+  operandoa = parseFloat($("#cifra").val());
+  operacion = "+";
+  $("#cifra").val(operacion);
+  limpiar();
+  console.log(operandoa);
+  console.log(operacion);
+
+  $("#suma").attr("disabled", true);
+  $("#division").attr("disabled", false);
+  $("#porcentaje").attr("disabled", false);
+  $("#resta").attr("disabled", false);
+  $("#x").attr("disabled", false);
+  $("#cifra").removeClass('color');
+  });
+
+  $("#resta").click(function() {
+  operandoa = parseFloat($("#cifra").val());
+  operacion = "-";
+  $("#cifra").val(operacion);
+  limpiar();
+  console.log(operandoa);
+  console.log(operacion);
+
+  $("#resta").attr("disabled", true);
+  $("#division").attr("disabled", false);
+  $("#porcentaje").attr("disabled", false);
+  $("#suma").attr("disabled", false);
+  $("#x").attr("disabled", false);
+  $("#cifra").removeClass('color');
+  });
+
+  $("#x").click(function() { 
+  operandoa = parseFloat($("#cifra").val());
+  operacion = "x";
+  $("#cifra").val(operacion);
+  limpiar();
+  console.log(operandoa);
+  console.log(operacion);
+
+  $("#cifra").val("")
+  $("#x").attr("disabled", true);
+  $("#division").attr("disabled", false);
+  $("#porcentaje").attr("disabled", false);
+  $("#suma").attr("disabled", false);
+  $("#resta").attr("disabled", false);
+  $("#cifra").removeClass('color');
+  });
+
+ 
+  $("#igual").click(function(e){
+  operandob = parseFloat($("#cifra").val());
+  igual = "=";
+  operacionp = "";
+  console.log(operandob);
+  console.log(igual);
+  
+  var value;
+  value = $("#cifra").val();
+
+  if( value == "" || operandob == null || value == "Sintax Error"){
+  
+  $("#cifra").val("Sintax Error");
+
+  }
+  else if( operacionp == "%")
+  {
+  porcent();
+  $(".btn-outline-dark").attr("disabled", false);
+ 
+  }
+  else
+  {
+    resolver();
+    $(".btn-outline-dark").attr("disabled", false);
+  }
+ 
+  
+
+
+});
+
+
+function resolver(){
+  var res = 0;
+  // var porcent = 100;
+  switch(operacion){
+    case "+":
+      res = parseFloat(operandoa) + parseFloat(operandob);
+      break;
+    case "-":
+        res = parseFloat(operandoa) - parseFloat(operandob);
+        break;
+    case "x":
+      res = parseFloat(operandoa) * parseFloat(operandob);
+      break;
+    case "÷":
+      res = parseFloat(operandoa) / parseFloat(operandob);
+      break;
+    // case "%":
+    //    res = parseFloat(operandoa) * parseFloat(operandob) /  parseFloat(porcent);
+    //   break;
+   
+  }
+   
+   $("#cifra").val(res);
+   $("#cifra").addClass('color');
+   $("#memory").html(operandoa + " " + operacion + " " + operandob + " " + igual + " " + res);
+   console.log(res + " PUTOS");
+   borrar = $("#cifra").val();
+
+
+
+};
+
+function porcent(){
+  var res = 0;
+  var porcent = 100;
+  switch(operacion){
+    case "+":
+      res = parseFloat(operandoa) + parseFloat(operandob) ;
+      break;
+    case "-":
+        res = parseFloat(operandoa) - parseFloat(operandob) ;
+        break;
+    case "x":
+      res = parseFloat(operandoa) * parseFloat(operandob);
+      break;
+    case "÷":
+      res = parseFloat(operandoa) / parseFloat(operandob);
+      break;
+    // case "%":
+    //    res = parseFloat(operandoa) * parseFloat(operandob) /  parseFloat(porcent);
+    //   break;
+   
+  }
+   
+   $("#cifra").val(res.toFixed());
+   $("#cifra").addClass('color');
+   $("#memory").html(operandoa + " " + operacion + " " + operandob + " " + igual + " " + res);
+   console.log(res + " PUTOS");
+   borrar = $("#cifra").val();
+
+
+
+};
+
+function por(){
+  var res = 0;
+  var porcent = 100;
+  switch(operacionp){
+   
+    case "%":
+    res = parseFloat(operandoc)  /  parseFloat(porcent);
+    break;
+   
+  }
+   
+   $("#cifra").val(res);
+   $("#cifra").addClass('color');
+   $("#memory").html(operandoc + " " + operacionp  + " " + "=" + " " + res);
+   console.log(res + " PUTOS");
+   borrar = $("#cifra").val();
+
+
+
+};
+
+});
+
+
+  </script>
+
+
+
+
+ 
+
+
+
+
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <div align="center">
+ <br>
+    <h1>Calculadora <sub>en linea...</sub></h1>
+
+    </div>
+
+  
+
+
+   
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm"> 
+          </div>
+
+          <div class="col-sm">
+         
+            <div class="card" style="width: 24rem;">
+                <img class="card-img-top" src="img/calcu.jpg" alt="Card image cap" height="180">
+                <div class="card-body">
+                  <h5 class="card-title">Calculadora Online</h5>
+                  <p class="card-text">Realiza operaciones basicas ingresando cifras que desees calcular.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+
+              <div>
+
+                <h6 id="memory"></h6>
+
+              </div>
+
+                  <input class="form-control form-control-lg"  id="cifra" name="cifra"  type="text"       placeholder="Calculadora..."  value="" >
+
+          <br>
+       
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="encender" class="btn btn-primary btn-lg" title="Doble click para Encender" >ON</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="erase" class="btn btn-info btn-lg">AC</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="clean" class="btn btn-dark btn-lg">C</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="%" id="porcentaje" class="btn btn-outline-dark btn-lg">
+                          <i class="fa fa-percent" aria-hidden="true"></i></button>
+                      </div>
+
+                      
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                  
+                    &nbsp;
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="7" id="siete" class="btn btn-secondary btn-lg">7</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="8" id="ocho" class="btn btn-secondary btn-lg">8</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="9" id="nueve" class="btn btn-secondary btn-lg">9</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="x" class="btn btn-outline-dark btn-lg " value="x">
+                          <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                      </div>
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                    &nbsp;
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="4" id="cuatro" class="btn btn-secondary btn-lg">4</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="5" id="cinco" class="btn btn-secondary btn-lg">5</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="6" id="seis" class="btn btn-secondary btn-lg">6</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="-" id="resta" class="btn btn-outline-dark btn-lg ">
+                          <i class="fa fa-minus" aria-hidden="true"></i>
+                        </button>
+                      </div>
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                    &nbsp;
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="1" id="uno" class="btn btn-secondary btn-lg">1</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="2" id="dos" class="btn btn-secondary btn-lg">2</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="3" id="tres" class="btn btn-secondary btn-lg">3</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="+" id="suma" class="btn btn-outline-dark btn-lg ">
+                          <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                      </div>
+
+                  </li>
+
+                  <li class="list-group-item">
+
+                 
+                    &nbsp;
+
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="0" id="cero" class="btn btn-secondary btn-lg">0</button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="." id="punto" class="btn btn-secondary btn-lg">
+                          <strong>.</strong>
+                        </button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="igual" class="btn btn-outline-primary btn-lg">
+                          <i class='fas fa-equals'></i>
+                        </button>
+                      </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" value="÷" id="division" class="btn btn-outline-dark btn-lg">
+                          <i class='fas fa-divide'></i>
+                        </button>
+                      </div>
+
+                  </li>
+
+                </ul>
+                <div class="card-body">
+                  <a href="#" class="card-link">Other solutions</a>
+                  <a href="#" class="card-link">My repository</a>
+                </div>
+              </div>
+
+          </div>
+          
+          <div class="col-sm">
+          </div>
+
+        </div>
+      </div>
+    
+    
+      <footer id="footer" role="contentinfo">
+        <div class="container">
+          <div class="row row-bottom-padded-sm">
+            <div class="col-md-12">
+              <p class="copyright text-center">Derechos reservados &copy; 2020 | Calculadora B&D Solutions.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+</body>
+</html>
+
