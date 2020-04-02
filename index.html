@@ -114,13 +114,15 @@ var igual;
   console.clear();  
   };
 
-  $("#encender").click(function() {
+  $("#apagar").click(function() {
   reset();
   $('#cifra').attr("readonly", true);
   $('#cifra').attr("placeholder", null);
   $('#cifra').val("");
   $("#punto").attr("disabled", false);
   $(".btn-lg").attr("disabled", true);
+  $("#erase").attr("disabled", true);
+  $("#clean").attr("disabled", true);
   $(".btn-primary").attr("disabled", false);
   $("#cifra").removeClass('color');
   $("#memory").html("");
@@ -130,7 +132,7 @@ var igual;
 
   });
 
-  $("#encender").dblclick(function() {
+  $("#encender").click(function() {
   $('#cifra').attr("readonly", false);
   $('#cifra').attr("placeholder", "Calculadora...");
   $(".btn-lg").attr("disabled", false);
@@ -510,22 +512,27 @@ function por(){
        
 
                     <div class="btn-group" role="group" aria-label="Third group">
-                        <button type="button" id="encender" class="btn btn-primary btn-lg" title="Doble click para Encender" >ON</button>
+
+                        <button type="button" id="encender" class="btn btn-primary">ON</button>
+                
+                        <button type="button" id="apagar" class="btn btn-danger" >OF</button>
+
+                    </div>
+
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+
+                      <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" id="erase" class="btn btn-info">AC</button>
                       </div>
 
                       &nbsp;&nbsp;&nbsp;&nbsp;
 
                       <div class="btn-group" role="group" aria-label="Third group">
-                        <button type="button" id="erase" class="btn btn-info btn-lg">AC</button>
+                        <button type="button" id="clean" class="btn btn-dark">C</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                      <div class="btn-group" role="group" aria-label="Third group">
-                        <button type="button" id="clean" class="btn btn-dark btn-lg">C</button>
-                      </div>
-
-                      &nbsp;&nbsp;&nbsp;&nbsp;
 
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" value="%" id="porcentaje" class="btn btn-outline-dark btn-lg">
@@ -545,21 +552,19 @@ function por(){
                         <button type="button" value="7" id="siete" class="btn btn-secondary btn-lg">7</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" value="8" id="ocho" class="btn btn-secondary btn-lg">8</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" value="9" id="nueve" class="btn btn-secondary btn-lg">9</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       
 
                       <div class="btn-group" role="group" aria-label="Third group">
@@ -578,21 +583,21 @@ function por(){
                         <button type="button" value="4" id="cuatro" class="btn btn-secondary btn-lg">4</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" value="5" id="cinco" class="btn btn-secondary btn-lg">5</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" value="6" id="seis" class="btn btn-secondary btn-lg">6</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       
 
                       <div class="btn-group" role="group" aria-label="Third group">
@@ -611,21 +616,21 @@ function por(){
                         <button type="button" value="1" id="uno" class="btn btn-secondary btn-lg">1</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" value="2" id="dos" class="btn btn-secondary btn-lg">2</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;
-                      &nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" value="3" id="tres" class="btn btn-secondary btn-lg">3</button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       
 
                       <div class="btn-group" role="group" aria-label="Third group">
@@ -653,7 +658,7 @@ function por(){
                         </button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" id="igual" class="btn btn-outline-primary btn-lg">
@@ -661,7 +666,8 @@ function por(){
                         </button>
                       </div>
 
-                      &nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
                       
                       <div class="btn-group" role="group" aria-label="Third group">
                         <button type="button" value="÷" id="division" class="btn btn-outline-dark btn-lg">
