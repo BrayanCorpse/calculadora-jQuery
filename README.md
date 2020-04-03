@@ -11,7 +11,8 @@ Este proyecto esta desarrollado con jQuery, CSS y HTML, consiste  en una calcula
 Si deseas contribuir o usar este repositorio para tus proyectos escolares o lo que sea, hazlo es Gratis :)
 
 # Demo
-* <a href="https://brayancorpse.github.io/calculadora-jQuery/" target="_blank">Calculadora Online</a> 
+* <a href="https://brayancorpse.github.io/calculadora-jQuery/">Calculadora Online</a> 
 
 # Demo APK Android
-* <a href="https://gonative.io/share/rawnqe" target="_blank">Android Version</a>
+* <a href="https://gonative.io/share/rawnqe">Android Version</a>
+
