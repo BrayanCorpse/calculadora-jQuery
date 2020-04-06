@@ -464,7 +464,80 @@ function por(){
   </script>
 
 
+<style>
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100);
+
+
+
+
+ul li {
+    display: inline;
+    text-align:center;
+    color:darkviolet;
+}
+
+
+
+.fa-facebook
+{
+  color:cornflowerblue;
+}
+
+.fa-instagram
+{
+  color:salmon;
+}
+
+.fa-twitter
+{
+  color: skyblue;
+}
+
+.fa-youtube
+{
+color: red;
+}
+
+.fa-whatsapp
+{
+  color:springgreen;
+}
+
+
+</style>
+
+<script>
+  $(document).ready(function() {
+// Create a newDate() object
+var newDate = new Date();
+
+setInterval( function() {
+	// Create a newDate() object and extract the seconds of the current time on the visitor's
+	var seconds = new Date().getSeconds();
+	// Añadiendo 0 para doble digito.
+	$("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+	},1000);
+	
+setInterval( function() {
+	// Obteniendo minutos de la fecha
+	var minutes = new Date().getMinutes();
+	// Añadiendo 0 para doble digito.
+	$("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+    },1000);
+	
+setInterval( function() {
+	// Create a newDate() object and extract the hours of the current time on the visitor's
+	var hours = new Date().getHours();
+	// Add a leading zero to the hours value
+	$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+    }, 1000);	
+
+  
+});
+
+
+</script>
 
  
 
@@ -490,29 +563,60 @@ function por(){
         <div class="row">
 
           <div class="col-sm"> 
+
+            <div class="card" style="width: 12rem;">
+              <img class="card-img-top" src="img/reloj.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title" align="center">Time</h5>
+                <h6 class="card-text">
+                  <ul class="timer">  
+                    <li id="hours"></li>
+                    <li id="point">:</li>
+                    <li id="min"></li>
+                    <li id="point">:</li>
+                    <li id="sec"></li>
+                    </ul>
+                </h6>
+           
+              <div class="links"  align="center">
+                  <a href="#"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></i></a>
+                  <a href="#"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i></a>
+              </div>
+      
+              </div>
+            </div>
+        
           </div>
+
+        
 
           <div class="col-sm">
          
             <div class="card" style="width: 24rem;">
                 <img class="card-img-top" src="img/calcu.jpg" alt="Card image cap" height="180">
+
+
                 <div class="card-body">
-                  <h5 class="card-title">Calculadora Online</h5>
+              
                   <p class="card-text">Realiza operaciones basicas ingresando cifras que desees calcular.</p>
                 </div>
+
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
 
-              <div>
+                  <div></div>
 
+              <li class="list-group-item">
+                
                 <h6 id="memory"></h6>
-
-              </div>
-
+                
                   <input class="form-control form-control-lg"  id="cifra" name="cifra"  type="text"       placeholder="Calculadora..."  value="" >
 
-          <br>
-       
+              </li>
+
+              <li class="list-group-item">
 
                     <div class="btn-group" role="group" aria-label="Third group">
 
@@ -684,12 +788,15 @@ function por(){
                 <div class="card-body">
                   <a href="https://github.com/BrayanCorpse" target="_blank" class="card-link">Other solutions</a>
                   <a href="https://github.com/BrayanCorpse/calculadora-jQuery.git" target="_blank" class="card-link">My repository</a>
+
                 </div>
               </div>
 
           </div>
           
           <div class="col-sm">
+
+            
           </div>
 
         </div>
