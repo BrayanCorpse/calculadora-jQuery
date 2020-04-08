@@ -1,17 +1,18 @@
-
+/* 
 h1
 {
-color:darkorchid;
+color:rgb(49, 7, 70);
 
 }
 
 sub
 {
-color: chocolate;
+color: rgb(218, 103, 21);
 
-}
+} */
 
-body
+
+/* body
 {
 
 background: #38a8d1;
@@ -24,7 +25,7 @@ background: linear-gradient(to bottom,  #38a8d1 0%,#34bc9a 36%,#34bc9a 57%,#8645
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38a8d1', endColorstr='#8645f7',GradientType=0 );
 
 
-}
+} */
 
 p{
 
@@ -87,3 +88,90 @@ color: red;
 {
   color:springgreen;
 }
+
+
+
+.social {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  overflow: hidden;
+}
+.social a {
+  color: inherit;
+  text-decoration: none;
+}
+.social i {
+  margin: .3em;
+  cursor: pointer;
+  transition: color 300ms ease, margin-top 300ms ease;
+  transform: translateZ(0);
+}
+.social i:hover {
+  margin-top: -1px;
+}
+.social i#twitter:hover {
+  color: #77DDF6;
+}
+.social i#github:hover {
+  color:purple;
+}
+.social i#linkedin:hover {
+  color: #0177B5;
+}
+.social i#code:hover {
+  color: #29A329;
+}
+.social i#stack:hover {
+  color: #ED780E;
+}
+.social i#plus:hover {
+  color: #D43402;
+}
+.social i#mail:hover {
+  color: #F7B401;
+}
+
+
+
+/* night mode */
+
+body {
+  --color-page-background: lightseagreen;
+  --color-primary-light: rgb(240,240,240);
+  --color-primary-dark: rgb(10,10,10);
+}
+
+.nightmode {
+    --color-page-background: rgba(0, 0, 20, .95);
+  --color-primary-light: rgb(10,10,10);
+  --color-primary-dark: rgb(240,240,240);
+}
+
+
+* {
+    transition: all .15s ease-in;
+}
+
+body {
+  background-color: var(--color-page-background);
+  font: 1.1em/1.4 Dosis;
+  color: var(--color-primary-dark);
+}
+
+
+
+[data-switch-contrast] {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  height: 3rem;
+  width: 3rem;
+  
+  background-color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary-light);
+  color: var(--color-primary-light);
+  border-radius: 50%;
+}
+
+/* end  */

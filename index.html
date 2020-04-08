@@ -15,14 +15,16 @@
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 <script src="https://kit.fontawesome.com/57bed686a4.js" crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="calculos.js"></script>
 <script src="time.js"></script>
+<script src="icon.js"></script>
+<script src="night.js"></script>
 <link rel="stylesheet" href="calculadorastyle.css">
 
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,600">
 
 </head>
 <body>
@@ -36,9 +38,12 @@
 
         <div class="panel-heading" align="center">
 
+      
           <h1>Calculadora <sub>en linea...</sub></h1> 
+    
 
           <hr>
+          <button data-switch-contrast aria-hidden>Night mode</button>
 
         </div>
    
@@ -55,7 +60,7 @@
             <div class="card" style="width: 12rem;">
               <img class="card-img-top" src="img/reloj.jpg" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title" align="center">Time</h5>
+                <h4 align="center">Time</h4>
                 <h6 class="card-text">
                   <ul class="timer">  
                     <li id="hours"></li>
@@ -66,13 +71,20 @@
                     </ul>
                 </h6>
            
-              <div class="links"  align="center">
-                  <a href="#"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a>
-                  <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
-                  <a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-                  <a href="#"><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></i></a>
-                  <a href="#"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i></a>
-              </div>
+                <div class="social">
+                  <a href="https://twitter.com/BrayanCorpsee" target="_blank">
+                    <i id="twitter" class="icon-twitter"></i>
+                  </a>
+                  <a href="https://github.com/BrayanCorpse" target="_blank">
+                    <i id="github" class="icon-github"></i>
+                  </a>   
+                  <a href="https://www.linkedin.com/in/brayan-manzano-cortes-54b309129/" target="_blank">
+                  <i id="linkedin" class="icon-linkedin-sign"></i>
+                  </a>  
+                  <a href="mailto:manzanocortesbrayan@gmail.com">
+                  <i id="mail" class="icon-envelope"></i> 
+                  </a>
+                </div>
       
               </div>
             </div>
@@ -276,7 +288,7 @@
 
                 </ul>
                 <div class="card-body">
-                  <a href="https://github.com/BrayanCorpse" target="_blank" class="card-link">Other solutions</a>
+                  <a href="#"  class="card-link">Other solutions</a>
                   <a href="https://github.com/BrayanCorpse/calculadora-jQuery.git" target="_blank" class="card-link">My repository</a>
 
                 </div>
@@ -285,6 +297,8 @@
           </div>
           
           <div class="col-sm">
+
+       
 
             
           </div>
