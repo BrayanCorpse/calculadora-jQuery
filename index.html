@@ -21,6 +21,9 @@
 <script src="js/time.js"></script>
 <script src="js/icon.js"></script>
 <script src="js/night.js"></script>
+<script  src="js/qrcode.js"></script>
+<script  src="js/code.js"></script>
+
 <link rel="stylesheet" href="css/calculadorastyle.css">
 
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -300,11 +303,49 @@
 
           </div>
           
+         
+        
           <div class="col-sm">
-
-       
-
             
+            <br>
+            <br>
+
+            <div class="card" style="width: 22rem;">
+
+              <li class="list-group-item">
+
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="valor"  value="" rows="5" placeholder="Ingresa el texto que deseas generar" required></textarea>
+            <br>
+              </li>
+       
+              
+              <li class="list-group-item">
+
+          <button type="button" id="qr" class="btn btn-outline-success  btn-block" onClick="createQrCode()">
+              Gerar QR Code
+          </button> 
+
+              </li>
+
+              <li class="list-group-item">
+
+              <button type="button" class="btn btn-outline-danger  btn-block"  onClick="limpiar()">
+                Limpiar
+              </button>
+
+              </li>
+
+              <li class="list-group-item">
+
+              <div id="qrcode" align="center"></div>
+
+              </li>
+ 
+
+              
+
+            </div>
           </div>
 
         </div>
@@ -320,6 +361,8 @@
           </div>
         </div>
       </footer>
+
+    
       
 </body>
 </html>
