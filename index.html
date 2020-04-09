@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculator | Code</title>
     <link rel="shortcut icon" href="img/cal3.jpg">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -43,7 +43,7 @@
         <div class="panel-heading" align="center">
 
       
-          <h1>Calculadora <sub>en linea...</sub></h1> 
+          <h1>Calculator <sub>Online...</sub></h1> 
     
 
           <hr>
@@ -62,14 +62,17 @@
 
           <div class="col-sm"> 
 
-            
+            <br>
+            <br>
 
-            <div class="card" style="width: 12rem;">
+            <div class="card" style="width: 18rem;">
               <img class="card-img-top" src="img/reloj.jpg" alt="Card image cap">
               <div class="card-body">
                 <h4 align="center">Time</h4>
                 <h6 class="card-text">
-                  <ul class="timer">  
+                  <ul class="timer"> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <li id="hours"></li>
                     <li id="point">:</li>
                     <li id="min"></li>
@@ -111,7 +114,7 @@
 
                 <div class="card-body">
               
-                  <p class="card-text">Realiza operaciones basicas ingresando cifras que desees calcular.</p>
+              <p class="card-text">Perform basic operations by entering figures you want to calculate.</p>
                 </div>
 
                 <ul class="list-group list-group-flush">
@@ -122,7 +125,7 @@
                 
                 <h6 id="memory"></h6>
                 
-                  <input class="form-control form-control-lg"  id="cifra" name="cifra"  type="text"       placeholder="Calculadora..."  value="" >
+                  <input class="form-control form-control-lg"  id="cifra" name="cifra"  type="text"       placeholder="Calculator..."  value="" >
 
               </li>
 
@@ -313,10 +316,12 @@
 
             <div class="card" style="width: 22rem;">
 
-              <li class="list-group-item">
+              <li class="list-group-item" style="background-color:rgb(98, 73, 185);">
 
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="valor"  value="" rows="5" placeholder="Ingresa el texto que deseas generar" required></textarea>
+            <label for="exampleFormControlTextarea1" >
+              Magic Text Qr
+            </label>
+            <textarea class="form-control" id="valor"  value="" rows="5" placeholder="type the text you wish to generate" required></textarea>
             <br>
               </li>
        
@@ -324,7 +329,7 @@
               <li class="list-group-item">
 
           <button type="button" id="qr" class="btn btn-outline-success  btn-block" onClick="createQrCode()">
-              Generar QR Code
+              Generate QR Code
           </button> 
 
               </li>
@@ -332,7 +337,7 @@
               <li class="list-group-item">
 
               <button type="button" class="btn btn-outline-danger  btn-block"  onClick="limpiar()">
-                Limpiar
+                Clean
               </button>
 
               </li>
@@ -357,7 +362,7 @@
         <div class="container">
           <div class="row row-bottom-padded-sm">
             <div class="col-md-12">
-              <p class="copyright text-center">Derechos reservados &copy; 2020 | Calculadora B&D Solutions.</p>
+              <p class="copyright text-center">All rights reversed. &copy; 2020 | Calculator B&D Solutions.</p>
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ $(document).ready(function(){
     
       $("#encender").click(function() {
       $('#cifra').attr("readonly", false);
-      $('#cifra').attr("placeholder", "Calculadora...");
+      $('#cifra').attr("placeholder", "Calculator...");
       $(".btn-lg").attr("disabled", false);
       $("#erase").attr("disabled", false);
       $("#clean").attr("disabled", false);
