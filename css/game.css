@@ -46,7 +46,7 @@ color: red;
 
 ul {
   position:absolute;
-  top:97%;
+  top:100%;
   left:50%;
   transform:translate(-50%,-50%);
   margin:0;
