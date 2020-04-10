@@ -7,16 +7,72 @@
     <title>Game</title>
 
     <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
      <!-- endbootstrap -->
+     
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
     <link rel="stylesheet" href="css/game.css">
     
+    <script>
+
+        $(document).ready(function(){
+
+            
+    function trunc (x, posiciones = 0) {
+    var s = x.toString()
+    var l = s.length
+    var decimalLength = s.indexOf('.') + 1
+    var numStr = s.substr(0, decimalLength + posiciones)
+    return Number(numStr)
+
+    }
+
+    $("#1").click(function() {
+    $("#i1").html("<img src='img/ray.png' id='img1'>");
+      });
+
+      $("#2").click(function() {
+    $("#i2").html("<img src='img/ray.png' id='img2'>");
+      });
+
+      $("#3").click(function() {
+    $("#i3").html("<img src='img/ray.png' id='img3'>");
+      });
+
+      $("#4").click(function() {
+    $("#i4").html("<img src='img/ray.png' id='img4'>");
+      });
+
+      $("#5").click(function() {
+    $("#i5").html("<img src='img/ray.png' id='img5'>");
+      });
+
+      $("#6").click(function() {
+    $("#i6").html("<img src='img/ray.png' id='img6'>");
+      });
+
+      $("#7").click(function() {
+    $("#i7").html("<img src='img/ray.png' id='img7'>");
+      });
+
+      $("#8").click(function() {
+    $("#i8").html("<img src='img/ray.png' id='img8'>");
+      });
+
+      $("#9").click(function() {
+    $("#i9").html("<img src='img/ray.png' id='img9'>");
+      });
+
+
+    });
+  
+    </script>
     
 </head>
 <body>
@@ -24,6 +80,7 @@
     <div class="panel-heading" align="center">
 
         <h1>3 en raya</h1> 
+       
 
     </div>
 
@@ -32,19 +89,19 @@
       <table>
           <tbody>
          <tr>
-            <th><img src="img/ray.png"></th>
-            <th><img src="img/ray.png"></th>
-            <th><img src="img/ray.png"></th>
+            <th id="i1"><button id="1"> hola</button></th>
+            <th id="i2"><button id="2"> hola</button></th>
+            <th id="i3"><button id="3"> hola</button></th>
         </tr>
             <tr>
-                <th><img src="img/ray.png"></th>
-                <th><img src="img/ray.png"></th>
-                <th><img src="img/ray.png"></th>
+                <th id="i4"><button id="4"> hola</button></th>
+                <th id="i5"><button id="5"> hola</button></th>
+                <th id="i6"><button id="6"> hola</button></th>
             </tr>
                 <tr>
-                    <th><img src="img/ray.png"></th>
-                    <th><img src="img/ray.png"></th>
-                    <th><img src="img/ray.png"></th>
+                    <th id="i7"><button id="7"> hola</button></th>
+                    <th id="i8"><button id="8"> hola</button></th>
+                    <th id="i9"><button id="9"> hola</button></th>
                 </tr>
             </tbody>
        </table>
