@@ -31,45 +31,351 @@
     var numStr = s.substr(0, decimalLength + posiciones)
     return Number(numStr)
 
+    var jugador;
+    var j1;
+    var j2;
+
+    var x;
+    var y;
+
+    // fila 1
+    var th1;
+    var th2;
+    var th3;
+
+    // fila 2
+    var th4;
+    var th5;
+    var th6;
+
+    // fila 3
+    var th7;
+    var th8;
+    var th9;
+
+
+
     }
 
-    $("#1").click(function() {
-    $("#i1").html("<img src='img/x.png' id='img1'>");
+     $("#start").click(function() {
+      jugador = 1;
+      console.log(jugador);
+      j1 = 0;
+      j2 = 0;
+      $("#start").attr("disabled",true);
+      });
+
+
+      $("#1").click(function() {
+
+        if(jugador == 1)
+        {
+          $("#i1").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila1();
+        }
+        else
+        {
+          $("#i1").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila1();
+        }
+
       });
 
       $("#2").click(function() {
-    $("#i2").html("<img src='img/o.png' id='img2'>");
+        
+        if(jugador == 1)
+        {
+          $("#i2").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila1();
+        }
+        else
+        {
+          $("#i2").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila1();
+        }
+   
       });
 
       $("#3").click(function() {
-    $("#i3").html("<img src='img/x.png' id='img3'>");
+        
+        if(jugador == 1)
+        {
+          $("#i3").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila1();
+        }
+        else
+        {
+          $("#i3").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila1();   
+        }
+   
       });
 
       $("#4").click(function() {
-    $("#i4").html("<img src='img/o.png' id='img4'>");
+        
+        if(jugador == 1)
+        {
+          $("#i4").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila2();
+        }
+        else
+        {
+          $("#i4").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila2();
+        }
+   
       });
 
       $("#5").click(function() {
-    $("#i5").html("<img src='img/x.png' id='img5'>");
+        
+        if(jugador == 1)
+        {
+          $("#i5").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila2();
+        }
+        else
+        {
+          $("#i5").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila2();
+        }
+   
       });
 
       $("#6").click(function() {
-    $("#i6").html("<img src='img/o.png' id='img6'>");
+        
+        if(jugador == 1)
+        {
+          $("#i6").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila2();
+        }
+        else
+        {
+          $("#i6").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila2();
+        }
+   
       });
 
       $("#7").click(function() {
-    $("#i7").html("<img src='img/x.png' id='img7'>");
+        
+        if(jugador == 1)
+        {
+          $("#i7").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila3();
+        }
+        else
+        {
+          $("#i7").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila3();
+        }
+   
       });
 
       $("#8").click(function() {
-    $("#i8").html("<img src='img/o.png' id='img8'>");
+        
+        if(jugador == 1)
+        {
+          $("#i8").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila3();
+        }
+        else
+        {
+          $("#i8").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila3();
+        }
+   
       });
 
       $("#9").click(function() {
-    $("#i9").html("<img src='img/x.png' id='img9'>");
+        
+        if(jugador == 1)
+        {
+          $("#i9").html("<img src='img/x.png'>");
+          j1 = j1 + 1;
+          jugador = 2;
+          console.log(jugador);
+          console.log("marcj1" + " = " + j1);
+          fila3();
+        }
+        else
+        {
+          $("#i9").html("<img src='img/o.png'>");
+          j2 = j2 + 1;
+          jugador = 1;
+          console.log(jugador);
+          console.log("marcj2" + " = " + j2);
+          fila3();
+        }
+   
       });
 
+   
+      function fila1(){
+      
+        var score = 0;
 
+        x = document.getElementById("x");
+        x = x.innerHTML;
+
+        y = document.getElementById("y");
+        y = y.innerHTML;
+
+        th1 = document.getElementById("i1");
+        th1 = th1.innerHTML;
+
+        th2 = document.getElementById("i2");
+        th2 = th2.innerHTML;
+
+        th3 = document.getElementById("i3");
+        th3 = th3.innerHTML;
+        
+        if(th1 == x & th2 == x & th3 == x )
+        {
+          score = score + 1;
+          console.log("pj1" + " = " + score);
+          document.getElementById("scorej1").value = score;
+        }
+        if(th1 == y & th2 == y & th3 == y )
+        {
+          score = score + 1;
+          console.log("pj2" + " = " + score);
+          document.getElementById("scorej2").value = score;
+        }
+    
+      }
+
+      function fila2(){
+      
+      var score = 0;
+
+      x = document.getElementById("x");
+      x = x.innerHTML;
+
+      y = document.getElementById("y");
+      y = y.innerHTML;
+
+      th4 = document.getElementById("i4");
+      th4 = th4.innerHTML;
+
+      th5 = document.getElementById("i5");
+      th5 = th5.innerHTML;
+
+      th6 = document.getElementById("i6");
+      th6 = th6.innerHTML;
+      
+      if(th4 == x & th5 == x & th6 == x )
+      {
+        score = score + 1;
+        console.log("pj1" + " = " + score);
+        document.getElementById("scorej1").value = score;
+      }
+      if(th4 == y & th5 == y & th6 == y )
+      {
+        score = score + 1;
+        console.log("pj2" + " = " + score);
+        document.getElementById("scorej2").value = score;
+      }
+  
+    }
+
+    function fila3(){
+      
+      var score = 0;
+
+      x = document.getElementById("x");
+      x = x.innerHTML;
+
+      y = document.getElementById("y");
+      y = y.innerHTML;
+
+      th7 = document.getElementById("i7");
+      th7 = th7.innerHTML;
+
+      th8 = document.getElementById("i8");
+      th8 = th8.innerHTML;
+
+      th9 = document.getElementById("i9");
+      th9 = th9.innerHTML;
+      
+      if(th7 == x & th8 == x & th9 == x )
+      {
+        score = score + 1;
+        console.log("pj1" + " = " + score);
+        document.getElementById("scorej1").value = score;
+      }
+      if(th7 == y & th8 == y & th9 == y )
+      {
+        score = score + 1;
+        console.log("pj2" + " = " + score);
+        document.getElementById("scorej2").value = score;
+      }
+  
+    }
+       
     });
   
     </script>
@@ -80,6 +386,15 @@
     <div class="panel-heading" align="center">
 
         <h1>3 en raya</h1> 
+
+        <button id="start">start</button>
+
+        <label id="x"><img src='img/x.png' ></label>
+        <input type="text" style="width: 5%; text-align:center;" name="scorej1" id="scorej1" readonly>
+
+        <label id="y"><img src='img/o.png'></label>
+        <input type="text" style="width: 5%; text-align:center;" name="scorej2" id="scorej2" readonly>
+
        
 
     </div>
@@ -89,19 +404,19 @@
       <table>
           <tbody>
          <tr>
-            <th id="i1"><button id="1"> hola</button></th>
-            <th id="i2"><button id="2"> hola</button></th>
-            <th id="i3"><button id="3"> hola</button></th>
+            <th id="i1"><button id="1" class="btn"> hola</button></th>
+            <th id="i2"><button id="2" class="btn"> hola</button></th>
+            <th id="i3"><button id="3" class="btn"> hola</button></th>
         </tr>
             <tr>
-                <th id="i4"><button id="4"> hola</button></th>
-                <th id="i5"><button id="5"> hola</button></th>
-                <th id="i6"><button id="6"> hola</button></th>
+                <th id="i4"><button id="4" class="btn"> hola</button></th>
+                <th id="i5"><button id="5" class="btn"> hola</button></th>
+                <th id="i6"><button id="6" class="btn"> hola</button></th>
             </tr>
                 <tr>
-                    <th id="i7"><button id="7"> hola</button></th>
-                    <th id="i8"><button id="8"> hola</button></th>
-                    <th id="i9"><button id="9"> hola</button></th>
+                    <th id="i7"><button id="7" class="btn"> hola</button></th>
+                    <th id="i8"><button id="8" class="btn"> hola</button></th>
+                    <th id="i9"><button id="9" class="btn"> hola</button></th>
                 </tr>
             </tbody>
        </table>
