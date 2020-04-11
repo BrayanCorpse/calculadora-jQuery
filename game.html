@@ -53,6 +53,32 @@
     var th8;
     var th9;
 
+    // col 1
+    var c1;
+    var c4;
+    var c7;
+
+    // col 2
+    var c2;
+    var c5;
+    var c8;
+
+    // col 3
+    var c3;
+    var c6;
+    var c9;
+
+    // cross 1
+    var cr1;
+    var cr5;
+    var cr9;
+
+    // cross 2
+    var cr3;
+    // var cr5;
+    var cr7;
+
+
 
 
     }
@@ -76,6 +102,8 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila1();
+          col1();
+          cross1();
         }
         else
         {
@@ -85,6 +113,8 @@
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
           fila1();
+          col1();
+          cross1();
         }
 
       });
@@ -99,6 +129,7 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila1();
+          col2();
         }
         else
         {
@@ -108,6 +139,7 @@
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
           fila1();
+          col2();
         }
    
       });
@@ -122,6 +154,8 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila1();
+          col3();
+          cross2();
         }
         else
         {
@@ -130,7 +164,9 @@
           jugador = 1;
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
-          fila1();   
+          fila1();  
+          col3(); 
+          cross2();
         }
    
       });
@@ -145,6 +181,7 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila2();
+          col1();
         }
         else
         {
@@ -154,6 +191,7 @@
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
           fila2();
+          col1();
         }
    
       });
@@ -168,6 +206,9 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila2();
+          col2();
+          cross1();
+          cross2();
         }
         else
         {
@@ -177,6 +218,9 @@
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
           fila2();
+          col2();
+          cross1();
+          cross2();
         }
    
       });
@@ -191,6 +235,7 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila2();
+          col3();
         }
         else
         {
@@ -200,6 +245,7 @@
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
           fila2();
+          col3();
         }
    
       });
@@ -214,6 +260,8 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila3();
+          col1();
+          cross2();
         }
         else
         {
@@ -223,6 +271,8 @@
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
           fila3();
+          col1();
+          cross2();
         }
    
       });
@@ -237,6 +287,7 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila3();
+          col2();
         }
         else
         {
@@ -246,6 +297,7 @@
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
           fila3();
+          col2();
         }
    
       });
@@ -260,6 +312,8 @@
           console.log(jugador);
           console.log("marcj1" + " = " + j1);
           fila3();
+          col3();
+          cross1();
         }
         else
         {
@@ -269,6 +323,8 @@
           console.log(jugador);
           console.log("marcj2" + " = " + j2);
           fila3();
+          col3();
+          cross1();
         }
    
       });
@@ -375,6 +431,176 @@
       }
   
     }
+
+    function col1(){
+      
+      var score = 0;
+
+      x = document.getElementById("x");
+      x = x.innerHTML;
+
+      y = document.getElementById("y");
+      y = y.innerHTML;
+
+      c1 = document.getElementById("i1");
+      c1 = c1.innerHTML;
+
+      c4 = document.getElementById("i4");
+      c4 = c4.innerHTML;
+
+      c7 = document.getElementById("i7");
+      c7 = c7.innerHTML;
+      
+      if(c1 == x & c4 == x & c7 == x )
+      {
+        score = score + 1;
+        console.log("pj1" + " = " + score);
+        document.getElementById("scorej1").value = score;
+      }
+      if(c1 == y & c4 == y & c7 == y )
+      {
+        score = score + 1;
+        console.log("pj2" + " = " + score);
+        document.getElementById("scorej2").value = score;
+      }
+  
+    }
+
+    function col2(){
+      
+      var score = 0;
+
+      x = document.getElementById("x");
+      x = x.innerHTML;
+
+      y = document.getElementById("y");
+      y = y.innerHTML;
+
+      c2 = document.getElementById("i2");
+      c2 = c2.innerHTML;
+
+      c5 = document.getElementById("i5");
+      c5 = c5.innerHTML;
+
+      c8 = document.getElementById("i8");
+      c8 = c8.innerHTML;
+      
+      if(c2 == x & c5 == x & c8 == x )
+      {
+        score = score + 1;
+        console.log("pj1" + " = " + score);
+        document.getElementById("scorej1").value = score;
+      }
+      if(c2 == y & c5 == y & c8 == y )
+      {
+        score = score + 1;
+        console.log("pj2" + " = " + score);
+        document.getElementById("scorej2").value = score;
+      }
+  
+    }
+
+    function col3(){
+      
+      var score = 0;
+
+      x = document.getElementById("x");
+      x = x.innerHTML;
+
+      y = document.getElementById("y");
+      y = y.innerHTML;
+
+      c3 = document.getElementById("i3");
+      c3 = c3.innerHTML;
+
+      c6 = document.getElementById("i6");
+      c6 = c6.innerHTML;
+
+      c9 = document.getElementById("i9");
+      c9 = c9.innerHTML;
+      
+      if(c3 == x & c6 == x & c9 == x )
+      {
+        score = score + 1;
+        console.log("pj1" + " = " + score);
+        document.getElementById("scorej1").value = score;
+      }
+      if(c3 == y & c6 == y & c9 == y )
+      {
+        score = score + 1;
+        console.log("pj2" + " = " + score);
+        document.getElementById("scorej2").value = score;
+      }
+  
+    }
+
+    function cross1(){
+      
+      var score = 0;
+
+      x = document.getElementById("x");
+      x = x.innerHTML;
+
+      y = document.getElementById("y");
+      y = y.innerHTML;
+
+      cr1 = document.getElementById("i1");
+      cr1 = cr1.innerHTML;
+
+      cr5 = document.getElementById("i5");
+      cr5 = cr5.innerHTML;
+
+      cr9 = document.getElementById("i9");
+      cr9 = cr9.innerHTML;
+      
+      if(cr1 == x & cr5 == x & cr9 == x )
+      {
+        score = score + 1;
+        console.log("pj1" + " = " + score);
+        document.getElementById("scorej1").value = score;
+      }
+      if(cr1 == y & cr5 == y & cr9 == y )
+      {
+        score = score + 1;
+        console.log("pj2" + " = " + score);
+        document.getElementById("scorej2").value = score;
+      }
+  
+    }
+
+    function cross2(){
+      
+      var score = 0;
+
+      x = document.getElementById("x");
+      x = x.innerHTML;
+
+      y = document.getElementById("y");
+      y = y.innerHTML;
+
+      cr3 = document.getElementById("i3");
+      cr3 = cr3.innerHTML;
+
+      cr5 = document.getElementById("i5");
+      cr5 = cr5.innerHTML;
+
+      cr7 = document.getElementById("i7");
+      cr7 = cr7.innerHTML;
+      
+      if(cr3 == x & cr5 == x & cr7 == x )
+      {
+        score = score + 1;
+        console.log("pj1" + " = " + score);
+        document.getElementById("scorej1").value = score;
+      }
+      if(cr3 == y & cr5 == y & cr7 == y )
+      {
+        score = score + 1;
+        console.log("pj2" + " = " + score);
+        document.getElementById("scorej2").value = score;
+      }
+  
+    }
        
     });
   
@@ -387,12 +613,18 @@
 
         <h1>3 en raya</h1> 
 
-        <button id="start">start</button>
+        <button type="button" id="start" class="btn btn-outline-info">start</button>
+
+        &nbsp;&nbsp;
 
         <label id="x"><img src='img/x.png' ></label>
+        &nbsp;&nbsp;
         <input type="text" style="width: 5%; text-align:center;" name="scorej1" id="scorej1" readonly>
 
+        &nbsp;&nbsp;
+        
         <label id="y"><img src='img/o.png'></label>
+        &nbsp;&nbsp;
         <input type="text" style="width: 5%; text-align:center;" name="scorej2" id="scorej2" readonly>
 
        
@@ -404,19 +636,55 @@
       <table>
           <tbody>
          <tr>
-            <th id="i1"><button id="1" class="btn"> hola</button></th>
-            <th id="i2"><button id="2" class="btn"> hola</button></th>
-            <th id="i3"><button id="3" class="btn"> hola</button></th>
+            <th id="i1">
+              <button id="1" type="button" class="btn btn-lg btn-block">
+              <img src="" alt="">
+            </button>
+            </th>
+            <th id="i2">
+              <button id="2" type="button" class="btn btn-lg btn-block">
+              <img src="" alt="">
+            </button>
+            </th>
+            <th id="i3">
+              <button id="3" type="button" class="btn btn-lg btn-block">
+              <img src="" alt="">
+            </button>
+            </th>
         </tr>
             <tr>
-                <th id="i4"><button id="4" class="btn"> hola</button></th>
-                <th id="i5"><button id="5" class="btn"> hola</button></th>
-                <th id="i6"><button id="6" class="btn"> hola</button></th>
+                <th id="i4">
+                  <button id="4" type="button" class="btn btn-lg btn-block">
+                    <img src="" alt="">
+                  </button>
+                </th>
+                <th id="i5">
+                  <button id="5" type="button" class="btn btn-lg btn-block">
+                    <img src="" alt="">
+                  </button>
+                </th>
+                <th id="i6">
+                  <button id="6" type="button" class="btn btn-lg btn-block">
+                    <img src="" alt="">
+                  </button>
+                </th>
             </tr>
                 <tr>
-                    <th id="i7"><button id="7" class="btn"> hola</button></th>
-                    <th id="i8"><button id="8" class="btn"> hola</button></th>
-                    <th id="i9"><button id="9" class="btn"> hola</button></th>
+                    <th id="i7">
+                      <button id="7" type="button" class="btn btn-lg btn-block">
+                        <img src="" alt="">
+                      </button>
+                    </th>
+                    <th id="i8">
+                      <button id="8" type="button" class="btn btn-lg btn-block">
+                        <img src="" alt="">
+                      </button>
+                    </th>
+                    <th id="i9">
+                      <button id="9" type="button" class="btn btn-lg btn-block">
+                        <img src="" alt="">
+                      </button>
+                    </th>
                 </tr>
             </tbody>
        </table>

@@ -178,6 +178,10 @@ ul li a:hover:nth-child(4) {
   visibility: visible;
 } */
 
+#start{
+  visibility:visible;
+}
+
 
 
 @supports(object-fit: cover){
