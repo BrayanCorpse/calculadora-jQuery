@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/ray.png">
     <title>Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
-    <!-- bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
      <!-- endbootstrap -->
      
@@ -19,615 +19,631 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
     <link rel="stylesheet" href="css/game.css">
     
-    <script>
-
-        $(document).ready(function(){
-
-            
-    function trunc (x, posiciones = 0) {
-    var s = x.toString()
-    var l = s.length
-    var decimalLength = s.indexOf('.') + 1
-    var numStr = s.substr(0, decimalLength + posiciones)
-    return Number(numStr)
-
-    var jugador;
-    var j1;
-    var j2;
-
-    var x;
-    var y;
-
-    // fila 1
-    var th1;
-    var th2;
-    var th3;
-
-    // fila 2
-    var th4;
-    var th5;
-    var th6;
-
-    // fila 3
-    var th7;
-    var th8;
-    var th9;
-
-    // col 1
-    var c1;
-    var c4;
-    var c7;
-
-    // col 2
-    var c2;
-    var c5;
-    var c8;
-
-    // col 3
-    var c3;
-    var c6;
-    var c9;
-
-    // cross 1
-    var cr1;
-    var cr5;
-    var cr9;
-
-    // cross 2
-    var cr3;
-    // var cr5;
-    var cr7;
-
-
-
-
-    }
-
-     $("#start").click(function() {
-      jugador = 1;
-      console.log(jugador);
-      j1 = 0;
-      j2 = 0;
-      $("#start").attr("disabled",true);
-      });
-
-
-      $("#1").click(function() {
-
-        if(jugador == 1)
-        {
-          $("#i1").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila1();
-          col1();
-          cross1();
-        }
-        else
-        {
-          $("#i1").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila1();
-          col1();
-          cross1();
-        }
-
-      });
-
-      $("#2").click(function() {
-        
-        if(jugador == 1)
-        {
-          $("#i2").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila1();
-          col2();
-        }
-        else
-        {
-          $("#i2").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila1();
-          col2();
-        }
    
-      });
-
-      $("#3").click(function() {
-        
-        if(jugador == 1)
-        {
-          $("#i3").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila1();
-          col3();
-          cross2();
-        }
-        else
-        {
-          $("#i3").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila1();  
-          col3(); 
-          cross2();
-        }
-   
-      });
-
-      $("#4").click(function() {
-        
-        if(jugador == 1)
-        {
-          $("#i4").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila2();
-          col1();
-        }
-        else
-        {
-          $("#i4").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila2();
-          col1();
-        }
-   
-      });
-
-      $("#5").click(function() {
-        
-        if(jugador == 1)
-        {
-          $("#i5").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila2();
-          col2();
-          cross1();
-          cross2();
-        }
-        else
-        {
-          $("#i5").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila2();
-          col2();
-          cross1();
-          cross2();
-        }
-   
-      });
-
-      $("#6").click(function() {
-        
-        if(jugador == 1)
-        {
-          $("#i6").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila2();
-          col3();
-        }
-        else
-        {
-          $("#i6").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila2();
-          col3();
-        }
-   
-      });
-
-      $("#7").click(function() {
-        
-        if(jugador == 1)
-        {
-          $("#i7").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila3();
-          col1();
-          cross2();
-        }
-        else
-        {
-          $("#i7").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila3();
-          col1();
-          cross2();
-        }
-   
-      });
-
-      $("#8").click(function() {
-        
-        if(jugador == 1)
-        {
-          $("#i8").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila3();
-          col2();
-        }
-        else
-        {
-          $("#i8").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila3();
-          col2();
-        }
-   
-      });
-
-      $("#9").click(function() {
-        
-        if(jugador == 1)
-        {
-          $("#i9").html("<img src='img/x.png'>");
-          j1 = j1 + 1;
-          jugador = 2;
-          console.log(jugador);
-          console.log("marcj1" + " = " + j1);
-          fila3();
-          col3();
-          cross1();
-        }
-        else
-        {
-          $("#i9").html("<img src='img/o.png'>");
-          j2 = j2 + 1;
-          jugador = 1;
-          console.log(jugador);
-          console.log("marcj2" + " = " + j2);
-          fila3();
-          col3();
-          cross1();
-        }
-   
-      });
-
-   
-      function fila1(){
-      
-        var score = 0;
-
-        x = document.getElementById("x");
-        x = x.innerHTML;
-
-        y = document.getElementById("y");
-        y = y.innerHTML;
-
-        th1 = document.getElementById("i1");
-        th1 = th1.innerHTML;
-
-        th2 = document.getElementById("i2");
-        th2 = th2.innerHTML;
-
-        th3 = document.getElementById("i3");
-        th3 = th3.innerHTML;
-        
-        if(th1 == x & th2 == x & th3 == x )
-        {
-          score = score + 1;
-          console.log("pj1" + " = " + score);
-          document.getElementById("scorej1").value = score;
-        }
-        if(th1 == y & th2 == y & th3 == y )
-        {
-          score = score + 1;
-          console.log("pj2" + " = " + score);
-          document.getElementById("scorej2").value = score;
-        }
-    
-      }
-
-      function fila2(){
-      
-      var score = 0;
-
-      x = document.getElementById("x");
-      x = x.innerHTML;
-
-      y = document.getElementById("y");
-      y = y.innerHTML;
-
-      th4 = document.getElementById("i4");
-      th4 = th4.innerHTML;
-
-      th5 = document.getElementById("i5");
-      th5 = th5.innerHTML;
-
-      th6 = document.getElementById("i6");
-      th6 = th6.innerHTML;
-      
-      if(th4 == x & th5 == x & th6 == x )
-      {
-        score = score + 1;
-        console.log("pj1" + " = " + score);
-        document.getElementById("scorej1").value = score;
-      }
-      if(th4 == y & th5 == y & th6 == y )
-      {
-        score = score + 1;
-        console.log("pj2" + " = " + score);
-        document.getElementById("scorej2").value = score;
-      }
-  
-    }
-
-    function fila3(){
-      
-      var score = 0;
-
-      x = document.getElementById("x");
-      x = x.innerHTML;
-
-      y = document.getElementById("y");
-      y = y.innerHTML;
-
-      th7 = document.getElementById("i7");
-      th7 = th7.innerHTML;
-
-      th8 = document.getElementById("i8");
-      th8 = th8.innerHTML;
-
-      th9 = document.getElementById("i9");
-      th9 = th9.innerHTML;
-      
-      if(th7 == x & th8 == x & th9 == x )
-      {
-        score = score + 1;
-        console.log("pj1" + " = " + score);
-        document.getElementById("scorej1").value = score;
-      }
-      if(th7 == y & th8 == y & th9 == y )
-      {
-        score = score + 1;
-        console.log("pj2" + " = " + score);
-        document.getElementById("scorej2").value = score;
-      }
-  
-    }
-
-    function col1(){
-      
-      var score = 0;
-
-      x = document.getElementById("x");
-      x = x.innerHTML;
-
-      y = document.getElementById("y");
-      y = y.innerHTML;
-
-      c1 = document.getElementById("i1");
-      c1 = c1.innerHTML;
-
-      c4 = document.getElementById("i4");
-      c4 = c4.innerHTML;
-
-      c7 = document.getElementById("i7");
-      c7 = c7.innerHTML;
-      
-      if(c1 == x & c4 == x & c7 == x )
-      {
-        score = score + 1;
-        console.log("pj1" + " = " + score);
-        document.getElementById("scorej1").value = score;
-      }
-      if(c1 == y & c4 == y & c7 == y )
-      {
-        score = score + 1;
-        console.log("pj2" + " = " + score);
-        document.getElementById("scorej2").value = score;
-      }
-  
-    }
-
-    function col2(){
-      
-      var score = 0;
-
-      x = document.getElementById("x");
-      x = x.innerHTML;
-
-      y = document.getElementById("y");
-      y = y.innerHTML;
-
-      c2 = document.getElementById("i2");
-      c2 = c2.innerHTML;
-
-      c5 = document.getElementById("i5");
-      c5 = c5.innerHTML;
-
-      c8 = document.getElementById("i8");
-      c8 = c8.innerHTML;
-      
-      if(c2 == x & c5 == x & c8 == x )
-      {
-        score = score + 1;
-        console.log("pj1" + " = " + score);
-        document.getElementById("scorej1").value = score;
-      }
-      if(c2 == y & c5 == y & c8 == y )
-      {
-        score = score + 1;
-        console.log("pj2" + " = " + score);
-        document.getElementById("scorej2").value = score;
-      }
-  
-    }
-
-    function col3(){
-      
-      var score = 0;
-
-      x = document.getElementById("x");
-      x = x.innerHTML;
-
-      y = document.getElementById("y");
-      y = y.innerHTML;
-
-      c3 = document.getElementById("i3");
-      c3 = c3.innerHTML;
-
-      c6 = document.getElementById("i6");
-      c6 = c6.innerHTML;
-
-      c9 = document.getElementById("i9");
-      c9 = c9.innerHTML;
-      
-      if(c3 == x & c6 == x & c9 == x )
-      {
-        score = score + 1;
-        console.log("pj1" + " = " + score);
-        document.getElementById("scorej1").value = score;
-      }
-      if(c3 == y & c6 == y & c9 == y )
-      {
-        score = score + 1;
-        console.log("pj2" + " = " + score);
-        document.getElementById("scorej2").value = score;
-      }
-  
-    }
-
-    function cross1(){
-      
-      var score = 0;
-
-      x = document.getElementById("x");
-      x = x.innerHTML;
-
-      y = document.getElementById("y");
-      y = y.innerHTML;
-
-      cr1 = document.getElementById("i1");
-      cr1 = cr1.innerHTML;
-
-      cr5 = document.getElementById("i5");
-      cr5 = cr5.innerHTML;
-
-      cr9 = document.getElementById("i9");
-      cr9 = cr9.innerHTML;
-      
-      if(cr1 == x & cr5 == x & cr9 == x )
-      {
-        score = score + 1;
-        console.log("pj1" + " = " + score);
-        document.getElementById("scorej1").value = score;
-      }
-      if(cr1 == y & cr5 == y & cr9 == y )
-      {
-        score = score + 1;
-        console.log("pj2" + " = " + score);
-        document.getElementById("scorej2").value = score;
-      }
-  
-    }
-
-    function cross2(){
-      
-      var score = 0;
-
-      x = document.getElementById("x");
-      x = x.innerHTML;
-
-      y = document.getElementById("y");
-      y = y.innerHTML;
-
-      cr3 = document.getElementById("i3");
-      cr3 = cr3.innerHTML;
-
-      cr5 = document.getElementById("i5");
-      cr5 = cr5.innerHTML;
-
-      cr7 = document.getElementById("i7");
-      cr7 = cr7.innerHTML;
-      
-      if(cr3 == x & cr5 == x & cr7 == x )
-      {
-        score = score + 1;
-        console.log("pj1" + " = " + score);
-        document.getElementById("scorej1").value = score;
-      }
-      if(cr3 == y & cr5 == y & cr7 == y )
-      {
-        score = score + 1;
-        console.log("pj2" + " = " + score);
-        document.getElementById("scorej2").value = score;
-      }
-  
-    }
-       
-    });
-  
-    </script>
     
 </head>
+
+
 <body>
+
+          <script type="text/javascript">
+
+            $(document).ready(function(){
+             
+             $("#mensaje").hide();
+             $("#mensaje2").hide();
+             $("#mensaje3").hide();
+                
+        function trunc (x, posiciones = 0) {
+        var s = x.toString()
+        var l = s.length
+        var decimalLength = s.indexOf('.') + 1
+        var numStr = s.substr(0, decimalLength + posiciones)
+        return Number(numStr)
+
+       
+       
+        var jugador;
+
+        
+        var x;
+        var y;
+
+        // fila 1
+        var th1;
+        var th2;
+        var th3;
+
+        // fila 2
+        var th4;
+        var th5;
+        var th6;
+
+        // fila 3
+        var th7;
+        var th8;
+        var th9;
+
+        // col 1
+        var c1;
+        var c4;
+        var c7;
+
+        // col 2
+        var c2;
+        var c5;
+        var c8;
+
+        // col 3
+        var c3;
+        var c6;
+        var c9;
+
+        // cross 1
+        var cr1;
+        var cr5;
+        var cr9;
+
+        // cross 2
+        var cr3;
+        // var cr5;
+        var cr7;
+
+
+
+
+
+        }
+
+        $("#start").click(function() {
+          jugador = 1;
+          console.log(jugador);
+          $("#start").attr("disabled",true);
+          });
+
+
+          $(".close").click(function(){
+           proximo();
+          });
+
+          // setTimeout(
+          function proximo() { 
+
+              
+              console.clear();
+              jugador = 1;
+              console.log(jugador);
+
+              $('.btn-outline-danger').addClass('btn-a');
+              $('.btn-outline-danger').attr('src','img/azul4.png');
+              $('.btn-outline-danger').attr('disabled',false);
+              $('.btn-outline-danger').removeClass('btn-outline-danger');
+
+              $('.btn-outline-light').addClass('btn-a');
+              $('.btn-outline-light').attr('src','img/azul4.png');
+              $('.btn-outline-light').attr('disabled',false);
+              $('.btn-outline-light').removeClass('btn-outline-light');
+
+          };
+          //  , 3000);
+
+
+
+          $("#b1").click(function(e) {
+
+            if(jugador == 1)
+            {
+              $("#b1").attr('src','img/x.png');
+              $("#b1").addClass('btn-outline-danger');
+              $("#b1").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila1();
+              col1();
+              cross1();
+            }
+            else
+            {
+              $("#b1").attr('src','img/o.png');
+              $("#b1").addClass('btn-outline-light');
+              $("#b1").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila1();
+              col1();
+              cross1();
+            }
+
+          });
+
+          $("#b2").click(function() {
+            
+            if(jugador == 1)
+            {
+              $("#b2").attr('src','img/x.png');
+              $("#b2").addClass('btn-outline-danger');
+              $("#b2").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila1();
+              col2();
+            }
+            else
+            {
+              $("#b2").attr('src','img/o.png');
+              $("#b2").addClass('btn-outline-light');
+              $("#b2").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila1();
+              col2();
+            }
+
+          });
+
+          $("#b3").click(function() {
+            
+            if(jugador == 1)
+            {
+              $("#b3").attr('src','img/x.png');
+              $("#b3").addClass('btn-outline-danger');
+              $("#b3").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila1();
+              col3();
+              cross2();
+            }
+            else
+            {
+              $("#b3").attr('src','img/o.png');
+              $("#b3").addClass('btn-outline-light');
+              $("#b3").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila1();  
+              col3(); 
+              cross2();
+            }
+
+          });
+
+          $("#b4").click(function() {
+            
+            if(jugador == 1)
+            {
+              $("#b4").attr('src','img/x.png');
+              $("#b4").addClass('btn-outline-danger');
+              $("#b4").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila2();
+              col1();
+            }
+            else
+            {
+              $("#b4").attr('src','img/o.png');
+              $("#b4").addClass('btn-outline-light');
+              $("#b4").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila2();
+              col1();
+            }
+
+          });
+
+          $("#b5").click(function() {
+            
+            if(jugador == 1)
+            {
+              $("#b5").attr('src','img/x.png');
+              $("#b5").addClass('btn-outline-danger');
+              $("#b5").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila2();
+              col2();
+              cross1();
+              cross2();
+            }
+            else
+            {
+              $("#b5").attr('src','img/o.png');
+              $("#b5").addClass('btn-outline-light');
+              $("#b5").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila2();
+              col2();
+              cross1();
+              cross2();
+            }
+
+          });
+
+          $("#b6").click(function() {
+            
+            if(jugador == 1)
+            {
+              $("#b6").attr('src','img/x.png');
+              $("#b6").addClass('btn-outline-danger');
+              $("#b6").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila2();
+              col3();
+            }
+            else
+            {
+              $("#b6").attr('src','img/o.png');
+              $("#b6").addClass('btn-outline-light');
+              $("#b6").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila2();
+              col3();
+            }
+
+          });
+
+          $("#b7").click(function() {
+            
+            if(jugador == 1)
+            {
+              $("#b7").attr('src','img/x.png');
+              $("#b7").addClass('btn-outline-danger');
+              $("#b7").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila3();
+              col1();
+              cross2();
+            }
+            else
+            {
+              $("#b7").attr('src','img/o.png');
+              $("#b7").addClass('btn-outline-light');
+              $("#b7").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila3();
+              col1();
+              cross2();
+            }
+
+          });
+
+          $("#b8").click(function() {
+            
+            if(jugador == 1)
+            {
+              $("#b8").attr('src','img/x.png');
+              $("#b8").addClass('btn-outline-danger');
+              $("#b8").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila3();
+              col2();
+            }
+            else
+            {
+              $("#b8").attr('src','img/o.png');
+              $("#b8").addClass('btn-outline-light');
+              $("#b8").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila3();
+              col2();
+            }
+
+          });
+
+          $("#b9").click(function() {
+            
+            if(jugador == 1)
+            {
+              $("#b9").attr('src','img/x.png');
+              $("#b9").addClass('btn-outline-danger');
+              $("#b9").attr('disabled','disabled');
+              jugador = 2;
+              console.log(jugador);
+              fila3();
+              col3();
+              cross1();
+            }
+            else
+            {
+              $("#b9").attr('src','img/o.png');
+              $("#b9").addClass('btn-outline-light');
+              $("#b9").attr('disabled','disabled');
+              jugador = 1;
+              console.log(jugador);
+              fila3();
+              col3();
+              cross1();
+            }
+
+          });
+
+
+          function fila1(){
+
+            var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+
+            
+            if($("#b1").hasClass('btn-outline-danger') 
+            && $("#b2").hasClass('btn-outline-danger') 
+            && $("#b3").hasClass('btn-outline-danger'))
+            {
+              score1 = score1 +1;
+              $("#scorej1").val(score1);
+              jugador = 1;
+              $("#mensaje").show();
+              
+            }
+
+            if($("#b1").hasClass('btn-outline-light') 
+            && $("#b2").hasClass('btn-outline-light') 
+            && $("#b3").hasClass('btn-outline-light'))
+            {
+              score2 = score2 + 1;
+              $("#scorej2").val(score2);
+              jugador = 1;
+              $("#mensaje2").show();
+            }
+
+          }
+
+          function fila2(){
+          
+            var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+
+          
+          if($("#b4").hasClass('btn-outline-danger') 
+          && $("#b5").hasClass('btn-outline-danger') 
+          && $("#b6").hasClass('btn-outline-danger'))
+          {
+            score1 = score1 +1;
+              $("#scorej1").val(score1);
+              jugador = 1;
+              $("#mensaje").show();
+          }
+          if($("#b4").hasClass('btn-outline-light') 
+          && $("#b5").hasClass('btn-outline-light') 
+          && $("#b6").hasClass('btn-outline-light'))
+          {
+            score2 = score2 + 1;
+              $("#scorej2").val(score2);
+              jugador = 1;
+              $("#mensaje2").show();
+          }
+
+        }
+
+        function fila3(){
+          
+          var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+
+          
+          if($("#b7").hasClass('btn-outline-danger') 
+          && $("#b8").hasClass('btn-outline-danger') 
+          && $("#b9").hasClass('btn-outline-danger'))
+          {
+            score1 = score1 +1;
+              $("#scorej1").val(score1);
+              jugador = 1;
+              $("#mensaje").show();
+ 
+          }
+          if($("#b7").hasClass('btn-outline-light') 
+          && $("#b8").hasClass('btn-outline-light') 
+          && $("#b9").hasClass('btn-outline-light'))
+          {
+            score2 = score2 + 1;
+              $("#scorej2").val(score2);
+              jugador = 1;
+              $("#mensaje2").show();
+          }
+
+        }
+
+        function col1(){
+          
+          var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+          
+          if($("#b1").hasClass('btn-outline-danger') 
+          && $("#b4").hasClass('btn-outline-danger') 
+          && $("#b7").hasClass('btn-outline-danger'))
+          {
+            score1 = score1 +1;
+              $("#scorej1").val(score1);
+              jugador = 1;
+              $("#mensaje").show();
+          }
+          if($("#b1").hasClass('btn-outline-light') 
+          && $("#b4").hasClass('btn-outline-light') 
+          && $("#b7").hasClass('btn-outline-light'))
+          {
+            score2 = score2 + 1;
+              $("#scorej2").val(score2);
+              jugador = 1;
+              $("#mensaje2").show();
+          }
+
+        }
+
+        function col2(){
+          
+          var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+          
+          if($("#b2").hasClass('btn-outline-danger') 
+          && $("#b5").hasClass('btn-outline-danger') 
+          && $("#b8").hasClass('btn-outline-danger'))
+          {
+            score1 = score1 +1;
+              $("#scorej1").val(score1);
+              jugador = 1;
+              $("#mensaje").show();
+          }
+          if($("#b2").hasClass('btn-outline-light') 
+          && $("#b5").hasClass('btn-outline-light') 
+          && $("#b8").hasClass('btn-outline-light'))
+          {
+            score2 = score2 + 1;
+              $("#scorej2").val(score2);
+              jugador = 1;
+              $("#mensaje2").show();
+          }
+
+        }
+
+        function col3(){
+          
+          var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+
+          if($("#b3").hasClass('btn-outline-danger') 
+          && $("#b6").hasClass('btn-outline-danger') 
+          && $("#b9").hasClass('btn-outline-danger'))
+          {
+            score1 = score1 +1;
+              $("#scorej1").val(score1);
+              jugador = 1;
+              $("#mensaje").show();
+          }
+          if($("#b3").hasClass('btn-outline-light') 
+          && $("#b6").hasClass('btn-outline-light') 
+          && $("#b9").hasClass('btn-outline-light'))
+          {
+            score2 = score2 + 1;
+              $("#scorej2").val(score2);
+              jugador = 1;
+              $("#mensaje2").show();
+          }
+
+        }
+
+        function cross1(){
+          
+          var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+          
+          if($("#b1").hasClass('btn-outline-danger') 
+          && $("#b5").hasClass('btn-outline-danger') 
+          && $("#b9").hasClass('btn-outline-danger'))
+          {
+            score1 = score1 +1;
+              $("#scorej1").val(score1);
+              jugador = 1;
+              $("#mensaje").show();
+          }
+          if($("#b1").hasClass('btn-outline-light') 
+          && $("#b5").hasClass('btn-outline-light') 
+          && $("#b9").hasClass('btn-outline-light'))
+          {
+            score2 = score2 + 1;
+              $("#scorej2").val(score2);
+              jugador = 1;
+              $("#mensaje2").show();
+          }
+
+        }
+
+        function cross2(){
+          
+          var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+          
+          if($("#b3").hasClass('btn-outline-danger') 
+          && $("#b5").hasClass('btn-outline-danger') 
+          && $("#b7").hasClass('btn-outline-danger'))
+          {
+            score1 = score1 +1;
+              $("#scorej1").val(score1);
+              jugador = 1;
+              $("#mensaje").show();
+          }
+          if($("#b3").hasClass('btn-outline-light') 
+          && $("#b5").hasClass('btn-outline-light') 
+          && $("#b7").hasClass('btn-outline-light'))
+          {
+            score2 = score2 + 1;
+              $("#scorej2").val(score2);
+              jugador = 1;
+              $("#mensaje2").show();
+          }
+
+        }
+
+
+          
+        });
+
+        </script>
 
     <div class="panel-heading" align="center">
 
         <h1>3 en raya</h1> 
 
-        <button type="button" id="start" class="btn btn-outline-info">start</button>
+        <button type="button" id="start" class="btn btn-outline-success">Start</button>
 
         &nbsp;&nbsp;
 
-        <label id="x"><img src='img/x.png' ></label>
+        <label id="x"><img src='img/x.png'></label>
         &nbsp;&nbsp;
-        <input type="text" style="width: 5%; text-align:center;" name="scorej1" id="scorej1" readonly>
+        <input type="text" style="width: 5%; text-align:center;" name="scorej1" id="scorej1" value="0" readonly>
 
         &nbsp;&nbsp;
         
         <label id="y"><img src='img/o.png'></label>
         &nbsp;&nbsp;
-        <input type="text" style="width: 5%; text-align:center;" name="scorej2" id="scorej2" readonly>
+        <input type="text" style="width: 5%; text-align:center;" name="scorej2" id="scorej2" value="0" readonly>
 
+        <!-- &nbsp;&nbsp;
+        <button type="button" id="prox" class="btn btn-outline-warning">Next</button> -->
+
+        <div id="mensaje">
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+        </div>
        
+        <div id="mensaje2">
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+        </div>
+
+        <div id="mensaje3">
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">Nobody <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+        </div>
+        
 
     </div>
 
@@ -637,53 +653,35 @@
           <tbody>
          <tr>
             <th id="i1">
-              <button id="1" type="button" class="btn btn-lg btn-block">
-              <img src="" alt="">
-            </button>
+            <input id="b1" type="image" class="btn a" src="img/azul4.png" alt="">
             </th>
             <th id="i2">
-              <button id="2" type="button" class="btn btn-lg btn-block">
-              <img src="" alt="">
-            </button>
+              <input id="b2" type="image" class="btn a" src="img/azul4.png" alt="">
             </th>
             <th id="i3">
-              <button id="3" type="button" class="btn btn-lg btn-block">
-              <img src="" alt="">
-            </button>
+              <input id="b3" type="image" class="btn a" src="img/azul4.png" alt="">
             </th>
         </tr>
             <tr>
                 <th id="i4">
-                  <button id="4" type="button" class="btn btn-lg btn-block">
-                    <img src="" alt="">
-                  </button>
+                  <input id="b4" type="image" class="btn a" src="img/azul4.png" alt="">
                 </th>
                 <th id="i5">
-                  <button id="5" type="button" class="btn btn-lg btn-block">
-                    <img src="" alt="">
-                  </button>
+                  <input id="b5" type="image" class="btn a" src="img/azul4.png" alt="">
                 </th>
                 <th id="i6">
-                  <button id="6" type="button" class="btn btn-lg btn-block">
-                    <img src="" alt="">
-                  </button>
+                  <input id="b6" type="image" class="btn a" src="img/azul4.png" alt=""> 
                 </th>
             </tr>
                 <tr>
                     <th id="i7">
-                      <button id="7" type="button" class="btn btn-lg btn-block">
-                        <img src="" alt="">
-                      </button>
+                      <input id="b7" type="image" class="btn a" src="img/azul4.png" alt="">
                     </th>
                     <th id="i8">
-                      <button id="8" type="button" class="btn btn-lg btn-block">
-                        <img src="" alt="">
-                      </button>
+                      <input id="b8" type="image" class="btn a" src="img/azul4.png" alt="">
                     </th>
                     <th id="i9">
-                      <button id="9" type="button" class="btn btn-lg btn-block">
-                        <img src="" alt="">
-                      </button>
+                      <input id="b9" type="image" class="btn a" src="img/azul4.png" alt="">
                     </th>
                 </tr>
             </tbody>
