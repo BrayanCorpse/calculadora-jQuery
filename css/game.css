@@ -44,7 +44,7 @@ color: red;
 
 ul {
   position:absolute;
-  top:120%;
+  top:110%;
   left:50%;
   transform:translate(-50%,-50%);
   margin:0;
@@ -180,7 +180,7 @@ ul li a:hover:nth-child(4) {
 
 @supports(object-fit: cover){
   img{
-    height: 1.5rem;
+    height: 1rem;
     object-fit: cover;
     object-position: center center;
   }
