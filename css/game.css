@@ -180,7 +180,7 @@ ul li a:hover:nth-child(4) {
 
 @supports(object-fit: cover){
   img{
-    height: 2rem;
+    height: 1.5rem;
     object-fit: cover;
     object-position: center center;
   }
