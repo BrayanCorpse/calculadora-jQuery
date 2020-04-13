@@ -6,7 +6,6 @@ body {
   background: #0f0c29;  /* fallback for old browsers */
 
 
-
 }
 
 /* social links */
@@ -45,7 +44,7 @@ color: red;
 
 ul {
   position:absolute;
-  top:110%;
+  top:120%;
   left:50%;
   transform:translate(-50%,-50%);
   margin:0;
@@ -181,7 +180,7 @@ ul li a:hover:nth-child(4) {
 
 @supports(object-fit: cover){
   img{
-    height: 50px;
+    height: 2rem;
     object-fit: cover;
     object-position: center center;
   }
@@ -197,7 +196,7 @@ ul li a:hover:nth-child(4) {
 table {
   width: 30%;
   margin: 0 auto;
-  margin-top: 5em;
+  margin-top: 3em;
   border-collapse: collapse; 
   color: whitesmoke;
 }
@@ -244,7 +243,7 @@ h1{
 #start{
 	color: #33FFB3;
 	display: inline-block;
-	font-size: 24px;
+	font-size: 1rem;
 	letter-spacing: 4px;
 	margin: 10px 20px;
 	padding: 2px 5px;
@@ -253,7 +252,8 @@ h1{
 	text-decoration: none;
 	/* text-transform: uppercase; */
 	transition: 0.5s;
-	-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  
 }
 
 #start:nth-child(1){
@@ -354,7 +354,7 @@ h1{
 #prox{
 	color: #FF8250 ;
 	display: inline-block;
-	font-size: 24px;
+	font-size: 1rem;
 	letter-spacing: 4px;
 	margin: 10px 20px;
 	padding: 2px 5px;
