@@ -29,10 +29,7 @@
           <script type="text/javascript">
 
             $(document).ready(function(){
-             
-             $("#mensaje").hide();
-             $("#mensaje2").hide();
-             $("#mensaje3").hide();
+
                 
         function trunc (x, posiciones = 0) {
         var s = x.toString()
@@ -103,10 +100,10 @@
 
 
         $("#prox").click(function(){
-           proximo();
+          empate();
       });
 
-          // setTimeout(
+          //  setTimeout(
           function proximo() { 
 
               
@@ -125,11 +122,52 @@
               $('.btn-outline-light').removeClass('btn-outline-light');
 
           };
+
+           function proximo() { 
+
+              
+              console.clear();
+              jugador = 1;
+              console.log(jugador);
+
+              $('.btn-outline-danger').addClass('btn-a');
+              $('.btn-outline-danger').attr('src','img/azul4.png');
+              $('.btn-outline-danger').attr('disabled',false);
+              $('.btn-outline-danger').removeClass('btn-outline-danger');
+
+              $('.btn-outline-light').addClass('btn-a');
+              $('.btn-outline-light').attr('src','img/azul4.png');
+              $('.btn-outline-light').attr('disabled',false);
+              $('.btn-outline-light').removeClass('btn-outline-light');
+
+              
+
+          };
           //  , 3000);
 
+          function empate() { 
+              
+              console.clear();
+              jugador = 1;
+              console.log(jugador);
+
+              $('.btn-outline-danger').addClass('btn-a');
+              $('.btn-outline-danger').attr('src','img/azul4.png');
+              $('.btn-outline-danger').attr('disabled',false);
+              $('.btn-outline-danger').removeClass('btn-outline-danger');
+
+              $('.btn-outline-light').addClass('btn-a');
+              $('.btn-outline-light').attr('src','img/azul4.png');
+              $('.btn-outline-light').attr('disabled',false);
+              $('.btn-outline-light').removeClass('btn-outline-light');
+
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Nobody <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+
+              };
 
 
-          $("#b1").click(function(e) {
+
+          $("#b1").click(function() {
 
             if(jugador == 1)
             {
@@ -383,20 +421,22 @@
               score1 = score1 +1;
               $("#scorej1").val(score1);
               jugador = 1;
-              $("#mensaje").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
               
             }
 
-            if($("#b1").hasClass('btn-outline-light') 
+           else if($("#b1").hasClass('btn-outline-light') 
             && $("#b2").hasClass('btn-outline-light') 
             && $("#b3").hasClass('btn-outline-light'))
             {
               score2 = score2 + 1;
               $("#scorej2").val(score2);
               jugador = 1;
-              $("#mensaje2").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
             }
 
           }
@@ -417,18 +457,20 @@
             score1 = score1 +1;
               $("#scorej1").val(score1);
               jugador = 1;
-              $("#mensaje").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
-          if($("#b4").hasClass('btn-outline-light') 
+          else if($("#b4").hasClass('btn-outline-light') 
           && $("#b5").hasClass('btn-outline-light') 
           && $("#b6").hasClass('btn-outline-light'))
           {
             score2 = score2 + 1;
               $("#scorej2").val(score2);
               jugador = 1;
-              $("#mensaje2").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
 
         }
@@ -449,19 +491,21 @@
             score1 = score1 +1;
               $("#scorej1").val(score1);
               jugador = 1;
-              $("#mensaje").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
  
           }
-          if($("#b7").hasClass('btn-outline-light') 
+          else if($("#b7").hasClass('btn-outline-light') 
           && $("#b8").hasClass('btn-outline-light') 
           && $("#b9").hasClass('btn-outline-light'))
           {
             score2 = score2 + 1;
               $("#scorej2").val(score2);
               jugador = 1;
-              $("#mensaje2").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
 
         }
@@ -481,18 +525,20 @@
             score1 = score1 +1;
               $("#scorej1").val(score1);
               jugador = 1;
-              $("#mensaje").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
-          if($("#b1").hasClass('btn-outline-light') 
+          else if($("#b1").hasClass('btn-outline-light') 
           && $("#b4").hasClass('btn-outline-light') 
           && $("#b7").hasClass('btn-outline-light'))
           {
             score2 = score2 + 1;
               $("#scorej2").val(score2);
               jugador = 1;
-              $("#mensaje2").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
 
         }
@@ -512,18 +558,20 @@
             score1 = score1 +1;
               $("#scorej1").val(score1);
               jugador = 1;
-              $("#mensaje").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
-          if($("#b2").hasClass('btn-outline-light') 
+          else if($("#b2").hasClass('btn-outline-light') 
           && $("#b5").hasClass('btn-outline-light') 
           && $("#b8").hasClass('btn-outline-light'))
           {
             score2 = score2 + 1;
               $("#scorej2").val(score2);
               jugador = 1;
-              $("#mensaje2").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
 
         }
@@ -543,18 +591,20 @@
             score1 = score1 +1;
               $("#scorej1").val(score1);
               jugador = 1;
-              $("#mensaje").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
-          if($("#b3").hasClass('btn-outline-light') 
+          else if($("#b3").hasClass('btn-outline-light') 
           && $("#b6").hasClass('btn-outline-light') 
           && $("#b9").hasClass('btn-outline-light'))
           {
             score2 = score2 + 1;
               $("#scorej2").val(score2);
               jugador = 1;
-              $("#mensaje2").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
 
         }
@@ -574,18 +624,20 @@
             score1 = score1 +1;
               $("#scorej1").val(score1);
               jugador = 1;
-              $("#mensaje").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
-          if($("#b1").hasClass('btn-outline-light') 
+          else if($("#b1").hasClass('btn-outline-light') 
           && $("#b5").hasClass('btn-outline-light') 
           && $("#b9").hasClass('btn-outline-light'))
           {
             score2 = score2 + 1;
               $("#scorej2").val(score2);
               jugador = 1;
-              $("#mensaje2").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
 
         }
@@ -605,22 +657,48 @@
             score1 = score1 +1;
               $("#scorej1").val(score1);
               jugador = 1;
-              $("#mensaje").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo ();
+              win();
           }
-          if($("#b3").hasClass('btn-outline-light') 
+          else if($("#b3").hasClass('btn-outline-light') 
           && $("#b5").hasClass('btn-outline-light') 
           && $("#b7").hasClass('btn-outline-light'))
           {
             score2 = score2 + 1;
               $("#scorej2").val(score2);
               jugador = 1;
-              $("#mensaje2").show();
+              document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
               proximo();
+              win();
           }
 
         }
 
+        function win(){
+
+          var score1;
+            score1 = parseInt($('#scorej1').val());
+
+            var score2;
+            score2 = parseInt($('#scorej2').val());
+
+          if(score1 == 5)
+          {
+            document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player One <strong>won the game!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            var scorej1 =  document.getElementById('scorej1');
+            scorej1.className = "win";
+            setTimeout('document.location.reload()',1000);
+          }
+          else if(score2 == 5)
+          {
+            document.getElementById("mensaje").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>won the game!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            var scorej1 =  document.getElementById('scorej2');
+            scorej1.className = "win";
+            setTimeout('document.location.reload()',1000);
+          }
+
+        }
 
           
         });
@@ -631,7 +709,13 @@
 
         <h1>3 en raya</h1> 
 
-        <button type="button" id="start" class="btn btn-outline-success">Start</button>
+        <button class="btn" id="start">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+           Start
+        </button>
 
         &nbsp;&nbsp;
 
@@ -646,20 +730,18 @@
         <input type="text" style="width: 5%; text-align:center;" name="scorej2" id="scorej2" value="0" readonly>
 
         &nbsp;&nbsp;
-        <button type="button" id="prox" class="btn btn-outline-warning">Next</button>
+        <button class="btn" id="prox">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Next
+        </button>
         
-        <div id="mensaje">
-          <div class="alerts alert-warning alert-dismissible fade show" role="alert">Player One <strong>Win!</strong> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-        </div>
+        <div id="mensaje"></div>
+        <div id="mensaje2"></div>
        
-        <div id="mensaje2">
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">Player Two <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-        </div>
-
-        <div id="mensaje3">
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">Nobody <strong>Win!</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-        </div>
-        
+ 
 
     </div>
 
