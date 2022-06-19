@@ -93,7 +93,6 @@ $(document).ready(function(){
     
       $("#clean").click(function() {  
        borrar = borrar.slice(0,-1);
-       console.log(borrar);
        $("#cifra").val(borrar);
        $("#cifra").removeClass('color');
        $("#memory").html("");
@@ -105,8 +104,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
-      
       });
     
       $("#ocho").click(function(e) {
@@ -114,7 +111,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
       });
     
       $("#nueve").click(function(e) {
@@ -122,7 +118,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
       });
     
       $("#seis").click(function(e) {
@@ -130,7 +125,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
       });
     
       $("#cinco").click(function(e) {
@@ -138,7 +132,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
       });
     
       $("#cuatro").click(function(e) {
@@ -154,7 +147,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
       });
     
       $("#dos").click(function(e) {
@@ -162,7 +154,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
       });
     
       $("#uno").click(function(e) {
@@ -170,7 +161,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
       });
     
       $("#cero").click(function(e) {
@@ -178,7 +168,6 @@ $(document).ready(function(){
       var cifra = document.getElementById('cifra');
       cifra.value +=  this.value;
       borrar = $("#cifra").val();
-      console.log(borrar);
       });
     
       $("#punto").click(function() {
@@ -189,12 +178,7 @@ $(document).ready(function(){
       });
     
       $("#porcentaje").click(function() {
-      // operandoa = parseFloat($("#cifra").val());
        operacionp = "%";
-      // $("#cifra").val(operacion);
-      // limpiar();
-      // console.log(operandoa);
-      // console.log(operacion);
       operandoc = parseFloat($("#cifra").val());
         por();
       $("#porcentaje").attr("disabled", true);
@@ -210,8 +194,6 @@ $(document).ready(function(){
       operacion = "÷";
       $("#cifra").val(operacion);
       limpiar();
-      console.log(operandoa);
-      console.log(operacion);
       
       $("#division").attr("disabled", true);
       $("#porcentaje").attr("disabled", false);
@@ -226,9 +208,7 @@ $(document).ready(function(){
       operacion = "+";
       $("#cifra").val(operacion);
       limpiar();
-      console.log(operandoa);
-      console.log(operacion);
-    
+
       $("#suma").attr("disabled", true);
       $("#division").attr("disabled", false);
       $("#porcentaje").attr("disabled", false);
@@ -242,8 +222,6 @@ $(document).ready(function(){
       operacion = "-";
       $("#cifra").val(operacion);
       limpiar();
-      console.log(operandoa);
-      console.log(operacion);
     
       $("#resta").attr("disabled", true);
       $("#division").attr("disabled", false);
@@ -258,8 +236,6 @@ $(document).ready(function(){
       operacion = "x";
       $("#cifra").val(operacion);
       limpiar();
-      console.log(operandoa);
-      console.log(operacion);
     
       $("#cifra").val("")
       $("#x").attr("disabled", true);
@@ -275,8 +251,6 @@ $(document).ready(function(){
       operandob = parseFloat($("#cifra").val());
       igual = "=";
       operacionp = "";
-      console.log(operandob);
-      console.log(igual);
       
       var value;
       value = $("#cifra").val();
@@ -329,7 +303,6 @@ $(document).ready(function(){
        $("#cifra").val(res);
        $("#cifra").addClass('color');
        $("#memory").html(operandoa + " " + operacion + " " + operandob + " " + igual + " " + res);
-       console.log(res + " PUTOS");
        borrar = $("#cifra").val();
     
     
@@ -361,7 +334,6 @@ $(document).ready(function(){
        $("#cifra").val(res.toFixed());
        $("#cifra").addClass('color');
        $("#memory").html(operandoa + " " + operacion + " " + operandob + " " + igual + " " + res);
-       console.log(res + " PUTOS");
        borrar = $("#cifra").val();
     
     
@@ -382,7 +354,6 @@ $(document).ready(function(){
        $("#cifra").val(res);
        $("#cifra").addClass('color');
        $("#memory").html(operandoc + " " + operacionp  + " " + "=" + " " + res);
-       console.log(res + " PUTOS");
        borrar = $("#cifra").val();
     
     
